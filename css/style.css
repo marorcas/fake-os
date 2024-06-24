@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.desktop {
+  height: 95vh;
+  width: 100%;
+  background-image: url(../assets/wallpaper.jpg);
+  background-size: cover;
+}
+
+.menubar {
+  display: flex;
+  height: 5vh;
+  width: 100%;
+  background-color: rgb(28, 30, 40);
+}
+.menubar_icon {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  width: 5vh;
+}
+.menubar_icon_img {
+  flex: 1;
+  height: 45%;
+  width: 45%;
+}
+.menubar_icon_img--white {
+  filter: invert(100%);
+}
+.menubar_icon_img--flip {
+  transform: rotateY(180deg);
+}
+.menubar_icon_img--lg {
+  height: 50%;
+  width: 50%;
+}
+.menubar_icon:hover {
+  background-color: rgba(60, 64, 83, 0.7);
+}
+
+/*# sourceMappingURL=style.css.map */

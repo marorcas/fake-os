@@ -1,0 +1,49 @@
+@use "./partials/variables" as v;
+
+body {
+    margin: 0;
+}
+
+.desktop {
+    height: 95vh;
+    width: 100%;
+    background-image: url(../assets/wallpaper.jpg);
+    background-size: cover;
+}
+
+.menubar {
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    background-color: v.$menubar-color;
+
+    &_icon {
+        display: flex;
+        align-items: center;
+        height: inherit;
+        width: 5vh;
+
+        &_img {
+            flex: 1;
+            height: 45%;
+            width: 45%;
+
+            &--white {
+                filter: invert(100%);
+            }
+
+            &--flip {
+                transform: rotateY(180deg);
+            }
+
+            &--lg {
+                height: 50%;
+                width: 50%;
+            }
+        }
+
+        &:hover {
+            background-color: v.$menubar-hover-color;
+        }
+    }
+}
