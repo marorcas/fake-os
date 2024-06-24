@@ -3,6 +3,9 @@ body {
 }
 
 .desktop {
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   height: 95vh;
   width: 100%;
   background-image: url(../assets/wallpaper.jpg);

@@ -1,5 +1,5 @@
 
-# Project: fakeOS
+# Project: FakeOS
 
 ### Description
 
