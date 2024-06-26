@@ -22,12 +22,10 @@ body {
   height: 50%;
   width: auto;
 }
-.desktop__icon__img--lg {
-  height: 60%;
-}
 .desktop__icon__title {
-  color: #ffffff;
+  color: white;
   font-size: x-small;
+  text-shadow: 1px 1px 2px black;
   margin: 0;
 }
 .desktop__icon:hover {
@@ -88,7 +86,7 @@ body {
 }
 .menubar__time #date, .menubar__time #time {
   margin: 0;
-  color: #ffffff;
+  color: white;
   font-size: x-small;
 }
 

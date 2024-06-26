@@ -23,21 +23,18 @@ body {
         &__img {
             height: 50%;
             width: auto;
-
-            &--lg {
-                height: 60%;
-            }
         }
 
         &__title {
-            color: v.$white-color;
+            color: white;
             font-size: v.$text-small;
+            text-shadow: 1px 1px 2px black;
             margin: 0;
         }
 
         &:hover {
-            background-color: rgb(v.$white-color, 0.1);
-            border: 1px solid rgb(v.$white-color, 0.3);
+            background-color: rgb(white, 0.1);
+            border: 1px solid rgb(white, 0.3);
         }
     }
 }
@@ -114,7 +111,7 @@ body {
 
         #date, #time {
             margin: 0;
-            color: v.$white-color;
+            color: white;
             font-size: v.$text-small;
         }
     }
