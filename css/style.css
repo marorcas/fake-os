@@ -4,12 +4,28 @@ body {
 
 .desktop {
   display: grid;
-  grid-template-columns: repeat(25, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+  grid-template-rows: repeat(10, minmax(0, 1fr));
   height: 95vh;
   width: 100%;
   background-image: url(../assets/wallpaper.jpg);
   background-size: cover;
+}
+.desktop_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.desktop_icon_img {
+  height: 50%;
+  width: auto;
+}
+.desktop_icon_img--lg {
+  height: 60%;
+}
+.desktop_icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .menubar {

@@ -6,12 +6,32 @@ body {
 
 .desktop {
     display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(15, minmax(0, 1fr));
+    grid-template-rows: repeat(10, minmax(0,1fr));
     height: 95vh;
     width: 100%;
     background-image: url(../assets/wallpaper.jpg);
     background-size: cover;
+
+    &_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_img {
+            height: 50%;
+            width: auto;
+
+            &--lg {
+                height: 60%;
+            }
+        }
+
+        &:hover {
+            background-color: rgb(v.$white-color, 0.1);
+            border: 1px solid rgb(v.$white-color, 0.3);
+        }
+    }
 }
 
 .menubar {
@@ -19,17 +39,27 @@ body {
     height: 5vh;
     width: 100%;
     background-color: v.$menubar-color;
+    // position: fixed;
 
     &_icon {
         display: flex;
         align-items: center;
         height: inherit;
         width: 5vh;
+        // position: relative;
 
         &_img {
+            // display: inline-block;
             flex: 1;
             height: 45%;
             width: 45%;
+
+            // &::before {
+            //     content: attr(title);
+            //     position: absolute;
+            //     top: -1.5;
+            //     text-align: center;
+            // }
 
             &--white {
                 filter: invert(100%);

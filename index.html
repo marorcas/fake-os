@@ -10,15 +10,34 @@
     <body>
         <main>
             <div class="desktop">
-                <div class="desktop_icon"></div>
-                <div class="desktop_icon"></div>
-                <div class="desktop_icon"></div>
+                <div class="desktop_icon">
+                    <img
+                        class="desktop_icon_img"
+                        title="Firefox"
+                        src="./assets/firefox.png"
+                    />
+                </div>
+                <div class="desktop_icon">
+                    <img
+                        class="desktop_icon_img desktop_icon_img--lg"
+                        title="Photos"
+                        src="./assets/photos.png"
+                    />
+                </div>
+                <div class="desktop_icon">
+                    <img
+                    class="desktop_icon_img desktop_icon_img--lg"
+                    title="Notepad"
+                    src="./assets/notepad.png"
+                    />
+                </div>
             </div>
 
             <div class="menubar">
                 <div class="menubar_icon">
                     <img 
                         class="menubar_icon_img menubar_icon_img--white" 
+                        title="Start"
                         src="./assets/node_modules/bootstrap-icons/icons/windows.svg"
                     />
                 </div>
@@ -26,6 +45,7 @@
                 <div class="menubar_icon">
                     <img 
                         class="menubar_icon_img menubar_icon_img--flip menubar_icon_img--lg menubar_icon_img--white" 
+                        title="Search"
                         src="./assets/node_modules/bootstrap-icons/icons/search.svg"
                     />
                 </div>
@@ -33,6 +53,7 @@
                 <div class="menubar_icon">
                     <img 
                         class="menubar_icon_img menubar_icon_img--white menubar_icon_img--sm" 
+                        title="Task View"
                         src="./assets/node_modules/bootstrap-icons/icons/view-list.svg"
                         onmouseover="hoverTask(this);" 
                         onmouseout="unhoverTask(this);"
