@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    font-family: v.$text-font;
 }
 
 .desktop {
@@ -13,18 +14,25 @@ body {
     background-image: url(../assets/wallpaper.jpg);
     background-size: cover;
 
-    &_icon {
+    &__icon {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        &_img {
+        &__img {
             height: 50%;
             width: auto;
 
             &--lg {
                 height: 60%;
             }
+        }
+
+        &__title {
+            color: v.$white-color;
+            font-size: v.$text-small;
+            margin: 0;
         }
 
         &:hover {
@@ -36,19 +44,30 @@ body {
 
 .menubar {
     display: flex;
+    justify-content: space-between;
     height: 5vh;
     width: 100%;
     background-color: v.$menubar-color;
     // position: fixed;
 
-    &_icon {
+    &__left {
+        display: flex;
+        height: inherit;
+    }
+
+    &__right {
+        display: flex;
+        height: inherit;
+    }
+
+    &__icon {
         display: flex;
         align-items: center;
         height: inherit;
         width: 5vh;
         // position: relative;
 
-        &_img {
+        &__img {
             // display: inline-block;
             flex: 1;
             height: 45%;
@@ -82,6 +101,21 @@ body {
 
         &:hover {
             background-color: v.$menubar-hover-color;
+        }
+    }
+
+    &__time {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 9vh;
+        margin: 0;
+
+        #date, #time {
+            margin: 0;
+            color: v.$white-color;
+            font-size: v.$text-small;
         }
     }
 }

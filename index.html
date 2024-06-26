@@ -10,23 +10,24 @@
     <body>
         <main>
             <div class="desktop">
-                <div class="desktop_icon">
+                <div class="desktop__icon">
                     <img
-                        class="desktop_icon_img"
+                        class="desktop__icon__img"
                         title="Firefox"
                         src="./assets/firefox.png"
                     />
+                    <p class="desktop__icon__title">Firefox</p>
                 </div>
-                <div class="desktop_icon">
+                <div class="desktop__icon">
                     <img
-                        class="desktop_icon_img desktop_icon_img--lg"
+                        class="desktop__icon__img desktop__icon__img--lg"
                         title="Photos"
                         src="./assets/photos.png"
                     />
                 </div>
-                <div class="desktop_icon">
+                <div class="desktop__icon">
                     <img
-                    class="desktop_icon_img desktop_icon_img--lg"
+                    class="desktop__icon__img desktop__icon__img--lg"
                     title="Notepad"
                     src="./assets/notepad.png"
                     />
@@ -34,30 +35,39 @@
             </div>
 
             <div class="menubar">
-                <div class="menubar_icon">
-                    <img 
-                        class="menubar_icon_img menubar_icon_img--white" 
-                        title="Start"
-                        src="./assets/node_modules/bootstrap-icons/icons/windows.svg"
-                    />
+                <div class="menubar__left">
+                    <div class="menubar__icon">
+                        <img 
+                            class="menubar__icon__img menubar__icon__img--white" 
+                            title="Start"
+                            src="./assets/node_modules/bootstrap-icons/icons/windows.svg"
+                        />
+                    </div>
+    
+                    <div class="menubar__icon">
+                        <img 
+                            class="menubar__icon__img menubar__icon__img--flip menubar__icon__img--lg menubar__icon__img--white" 
+                            title="Search"
+                            src="./assets/node_modules/bootstrap-icons/icons/search.svg"
+                        />
+                    </div>
+    
+                    <div class="menubar__icon">
+                        <img 
+                            class="menubar__icon__img menubar__icon__img--white menubar__icon__img--sm" 
+                            title="Task View"
+                            src="./assets/node_modules/bootstrap-icons/icons/view-list.svg"
+                            onmouseover="hoverTask(this);" 
+                            onmouseout="unhoverTask(this);"
+                        />
+                    </div>
                 </div>
-
-                <div class="menubar_icon">
-                    <img 
-                        class="menubar_icon_img menubar_icon_img--flip menubar_icon_img--lg menubar_icon_img--white" 
-                        title="Search"
-                        src="./assets/node_modules/bootstrap-icons/icons/search.svg"
-                    />
-                </div>
-
-                <div class="menubar_icon">
-                    <img 
-                        class="menubar_icon_img menubar_icon_img--white menubar_icon_img--sm" 
-                        title="Task View"
-                        src="./assets/node_modules/bootstrap-icons/icons/view-list.svg"
-                        onmouseover="hoverTask(this);" 
-                        onmouseout="unhoverTask(this);"
-                    />
+                
+                <div class="menubar__right">
+                    <div class="menubar__time">
+                        <p id="time">Time</p>
+                        <p id="date">Date</p>
+                    </div>
                 </div>
             </div>
         </main>

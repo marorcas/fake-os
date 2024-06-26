@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .desktop {
@@ -11,56 +12,84 @@ body {
   background-image: url(../assets/wallpaper.jpg);
   background-size: cover;
 }
-.desktop_icon {
+.desktop__icon {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.desktop_icon_img {
+.desktop__icon__img {
   height: 50%;
   width: auto;
 }
-.desktop_icon_img--lg {
+.desktop__icon__img--lg {
   height: 60%;
 }
-.desktop_icon:hover {
+.desktop__icon__title {
+  color: #ffffff;
+  font-size: x-small;
+  margin: 0;
+}
+.desktop__icon:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .menubar {
   display: flex;
+  justify-content: space-between;
   height: 5vh;
   width: 100%;
   background-color: rgb(28, 30, 40);
 }
-.menubar_icon {
+.menubar__left {
+  display: flex;
+  height: inherit;
+}
+.menubar__right {
+  display: flex;
+  height: inherit;
+}
+.menubar__icon {
   display: flex;
   align-items: center;
   height: inherit;
   width: 5vh;
 }
-.menubar_icon_img {
+.menubar__icon__img {
   flex: 1;
   height: 45%;
   width: 45%;
 }
-.menubar_icon_img--white {
+.menubar__icon__img--white {
   filter: invert(100%);
 }
-.menubar_icon_img--flip {
+.menubar__icon__img--flip {
   transform: rotateY(180deg);
 }
-.menubar_icon_img--lg {
+.menubar__icon__img--lg {
   height: 50%;
   width: 50%;
 }
-.menubar_icon_img--sm {
+.menubar__icon__img--sm {
   height: 40%;
   width: 40%;
 }
-.menubar_icon:hover {
+.menubar__icon:hover {
   background-color: rgba(60, 64, 83, 0.7);
+}
+.menubar__time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 9vh;
+  margin: 0;
+}
+.menubar__time #date, .menubar__time #time {
+  margin: 0;
+  color: #ffffff;
+  font-size: x-small;
 }
 
 /*# sourceMappingURL=style.css.map */
