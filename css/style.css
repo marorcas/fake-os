@@ -39,6 +39,10 @@ body {
   height: 50%;
   width: 50%;
 }
+.menubar_icon_img--sm {
+  height: 40%;
+  width: 40%;
+}
 .menubar_icon:hover {
   background-color: rgba(60, 64, 83, 0.7);
 }
