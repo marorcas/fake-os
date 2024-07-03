@@ -10,11 +10,10 @@
     
     <body>
         <main>
-
+            <!-- Desktop -->
             <div class="desktop">
-
                 <!-- Firefox icon -->
-                <div class="desktop__icon">
+                <div class="desktop__icon" id="firefoxIcon">
                     <img
                         class="desktop__icon__img"
                         title="Firefox"
@@ -22,13 +21,6 @@
                     />
                     <p class="desktop__icon__title">Firefox</p>
                 </div>
-
-                <!-- Firefox modal -->
-                <!-- <div class="desktop__modal">
-                    <div class="desktop__modal__content">
-                        <span class="close">&times;</span>
-                    </div>
-                </div> -->
 
                 <!-- Photos icon -->
                 <div class="desktop__icon">
@@ -63,12 +55,82 @@
                         <span class="desktop__modal__close">&times;</span>
                     </div>
                 </div> -->
+            </div>
 
+            <!-- Firefox modal -->
+            <div class="firefox__modal" id="firefoxModal">
+                <div class="firefox__modal__top">
+                    <div class="firefox__modal__tabs">
+                        <div class="firefox__modal__icon">
+                            <img
+                                class="firefox__modal__img"
+                                title="View recent browsing across windows and devices"
+                                src="./assets/node_modules/bootstrap-icons/icons/archive.svg"
+                            />
+                        </div>
+
+                        <div class="firefox__modal__tab">
+                            <!-- <div class="firefox__modal__icon">
+                                <img
+                                    class="firefox__modal__img firefox__modal__img--sm"
+                                    src="./assets/firefox.png"
+                                />
+                            </div> -->
+                            <p class="firefox__modal__tab__label">New Tab</p>
+                        </div>
+                    </div>
+
+                    <div class="firefox__modal__buttons">
+                        <div class="firefox__modal__icon">
+                            <img
+                                class="firefox__modal__img"
+                                title="Minimize"
+                                src="./assets/node_modules/bootstrap-icons/icons/dash.svg"
+                            />
+                        </div>
+
+                        <div class="firefox__modal__icon">
+                            <img
+                                class="firefox__modal__img"
+                                title="Restore Down"
+                                src="./assets/node_modules/bootstrap-icons/icons/copy.svg"
+                            />
+                        </div>
+
+                        <div class="firefox__modal__icon firefox__modal__icon--x" id="closeFirefox">
+                            <img
+                                class="firefox__modal__img"
+                                title="Close"
+                                src="./assets/node_modules/bootstrap-icons/icons/x.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="firefox__modal__input">
+                    <input 
+                        type="text" 
+                        class="firefox__modal__input__field" 
+                        id="firefoxInput";
+                        placeholder="Search or enter address"
+                    >
+                </div>
+
+                <div class="firefox__modal__page" id="firefoxPage">
+                    <div class="firefox__modal__page__icon">
+                        <img
+                            class="firefox__modal__page__img"
+                            src="./assets/firefox.png"
+                        />
+                    </div>
+
+                    <h1>Firefox</h1>
+                </div>
             </div>
 
             <!-- Start modal -->
             <div class="start__modal" id="startModal">
-
+                <!-- Start modal top -->
                 <div class="start__modal__top">
                     <div class="start__modal__icon">
                         <img
@@ -79,8 +141,9 @@
                     <p class="start__modal__label start__modal__label--bold">START</p>
                 </div>
             
+                <!-- Start modal bottom  -->
                 <div class="start__modal__bottom">
-
+                    <!-- Account -->
                     <div class="start__modal__menu">
                         <div class="start__modal__icon">
                             <img
@@ -91,6 +154,7 @@
                         <p class="start__modal__label">Maria</p>
                     </div>
 
+                    <!-- Documents -->
                     <div class="start__modal__menu">
                         <div class="start__modal__icon">
                             <img
@@ -101,6 +165,7 @@
                         <p class="start__modal__label">Documents</p>
                     </div>
 
+                    <!-- Pictures -->
                     <div class="start__modal__menu">
                         <div class="start__modal__icon">
                             <img
@@ -111,6 +176,7 @@
                         <p class="start__modal__label">Pictures</p>
                     </div>
 
+                    <!-- Settings -->
                     <div class="start__modal__menu">
                         <div class="start__modal__icon">
                             <img
@@ -121,6 +187,7 @@
                         <p class="start__modal__label">Settings</p>
                     </div>
 
+                    <!-- Power -->
                     <div class="start__modal__menu">
                         <div class="start__modal__icon">
                             <img
@@ -130,15 +197,12 @@
                         </div>
                         <p class="start__modal__label">Power</p>
                     </div>
-
                 </div>
-            
             </div>
 
+            <!-- Menu bar -->
             <div class="menubar">
-
                 <div class="menubar__left">
-
                     <!-- Start icon -->
                     <div class="menubar__icon" id="startIcon">
                         <img 
@@ -148,6 +212,7 @@
                         />
                     </div>
     
+                    <!-- Search icon -->
                     <div class="menubar__icon">
                         <img 
                             class="menubar__icon__img menubar__icon__img--flip menubar__icon__img--lg menubar__icon__img--white" 
@@ -155,7 +220,8 @@
                             src="./assets/node_modules/bootstrap-icons/icons/search.svg"
                         />
                     </div>
-    
+                    
+                    <!-- Task View icon -->
                     <div class="menubar__icon">
                         <img 
                             class="menubar__icon__img menubar__icon__img--white menubar__icon__img--sm" 
@@ -165,19 +231,16 @@
                             onmouseout="unhoverTask(this);"
                         />
                     </div>
-
                 </div>
                 
+                <!-- Date and time -->
                 <div class="menubar__right">
                     <div class="menubar__time">
                         <p id="time"></p>
                         <p id="date"></p>
                     </div>
                 </div>
-
             </div>
-
         </main>
     </body>
-
 </html>
