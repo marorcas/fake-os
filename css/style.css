@@ -5,7 +5,7 @@ body {
 
 .desktop {
   display: grid;
-  grid-template-columns: repeat(15, minmax(0, 1fr));
+  grid-template-columns: repeat(20, minmax(0, 1fr));
   grid-template-rows: repeat(10, minmax(0, 1fr));
   height: 95vh;
   width: 100%;
@@ -25,7 +25,7 @@ body {
 .desktop__icon__title {
   color: white;
   font-size: x-small;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 2px 1px black;
   margin: 0;
 }
 .desktop__icon:hover {
@@ -39,6 +39,7 @@ body {
   height: 5vh;
   width: 100%;
   background-color: rgb(28, 30, 40);
+  position: relative;
 }
 .menubar__left {
   display: flex;
@@ -88,6 +89,55 @@ body {
   margin: 0;
   color: white;
   font-size: x-small;
+}
+
+.start__modal {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1000;
+  bottom: 5vh;
+  left: 0;
+  height: 60%;
+  width: 15%;
+  background-color: rgba(28, 30, 40, 0.8);
+}
+.start__modal__icon {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  width: 5vh;
+}
+.start__modal__img {
+  flex: 1;
+  height: 30%;
+  width: 30%;
+  filter: invert(100%);
+}
+.start__modal__img--lg {
+  height: 40%;
+  width: 40%;
+}
+.start__modal__label {
+  margin: 0;
+  padding: 1em 0;
+  color: white;
+  font-size: small;
+}
+.start__modal__label--bold {
+  font-weight: bold;
+}
+.start__modal__top, .start__modal__menu {
+  display: flex;
+  justify-content: flex-start;
+}
+.start__modal__top:hover, .start__modal__menu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.start__modal__bottom {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,9 +7,13 @@
         <link rel="stylesheet" href="./css/style.css">
         <script src="./js/functions.js" defer></script>
     </head>
+    
     <body>
         <main>
+
             <div class="desktop">
+
+                <!-- Firefox icon -->
                 <div class="desktop__icon">
                     <img
                         class="desktop__icon__img"
@@ -18,6 +22,15 @@
                     />
                     <p class="desktop__icon__title">Firefox</p>
                 </div>
+
+                <!-- Firefox modal -->
+                <!-- <div class="desktop__modal">
+                    <div class="desktop__modal__content">
+                        <span class="close">&times;</span>
+                    </div>
+                </div> -->
+
+                <!-- Photos icon -->
                 <div class="desktop__icon">
                     <img
                         class="desktop__icon__img"
@@ -26,6 +39,15 @@
                     />
                     <p class="desktop__icon__title">Photos</p>
                 </div>
+
+                <!-- Photos modal -->
+                <!-- <div class="desktop__modal">
+                    <div class="desktop__modal__content">
+                        <span class="close">&times;</span>
+                    </div>
+                </div> -->
+
+                <!-- Notepad icon -->
                 <div class="desktop__icon">
                     <img
                     class="desktop__icon__img"
@@ -34,11 +56,91 @@
                     />
                     <p class="desktop__icon__title">Notepad</p>
                 </div>
+
+                <!-- Notepad modal -->
+                <!-- <div class="desktop__modal">
+                    <div class="desktop__modal__content">
+                        <span class="desktop__modal__close">&times;</span>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <!-- Start modal -->
+            <div class="start__modal" id="startModal">
+
+                <div class="start__modal__top">
+                    <div class="start__modal__icon">
+                        <img
+                            class="start__modal__img start__modal__img--lg"
+                            src="./assets/node_modules/bootstrap-icons/icons/list.svg"
+                        />
+                    </div>
+                    <p class="start__modal__label start__modal__label--bold">START</p>
+                </div>
+            
+                <div class="start__modal__bottom">
+
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/person-circle.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Maria</p>
+                    </div>
+
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/file-earmark.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Documents</p>
+                    </div>
+
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/image.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Pictures</p>
+                    </div>
+
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/gear.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Settings</p>
+                    </div>
+
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/list.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Power</p>
+                    </div>
+
+                </div>
+            
             </div>
 
             <div class="menubar">
+
                 <div class="menubar__left">
-                    <div class="menubar__icon">
+
+                    <!-- Start icon -->
+                    <div class="menubar__icon" id="startIcon">
                         <img 
                             class="menubar__icon__img menubar__icon__img--white" 
                             title="Start"
@@ -63,15 +165,19 @@
                             onmouseout="unhoverTask(this);"
                         />
                     </div>
+
                 </div>
                 
                 <div class="menubar__right">
                     <div class="menubar__time">
-                        <p id="time">Time</p>
-                        <p id="date">Date</p>
+                        <p id="time"></p>
+                        <p id="date"></p>
                     </div>
                 </div>
+
             </div>
+
         </main>
     </body>
+
 </html>

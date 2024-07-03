@@ -7,7 +7,7 @@ body {
 
 .desktop {
     display: grid;
-    grid-template-columns: repeat(15, minmax(0, 1fr));
+    grid-template-columns: repeat(20, minmax(0, 1fr));
     grid-template-rows: repeat(10, minmax(0,1fr));
     height: 95vh;
     width: 100%;
@@ -28,7 +28,7 @@ body {
         &__title {
             color: white;
             font-size: v.$text-small;
-            text-shadow: 1px 1px 2px black;
+            text-shadow: 1px 2px 1px black;
             margin: 0;
         }
 
@@ -37,6 +37,27 @@ body {
             border: 1px solid rgb(white, 0.3);
         }
     }
+
+    // &__modal {
+    //     // to hide by default
+    //     display: none;
+    //     // so it stays in place
+    //     position: fixed;
+    //     // so it sits on top
+    //     z-index: 1;
+    //     height: 50px;
+    //     width: 50px;
+    //     // enable scroll if needed
+    //     overflow: auto;
+    //     background-color: rgba(black, 0.4);
+
+    //     &__close {
+    //         color: #aaa;
+    //         float: right;
+    //         font-size: 28px;
+    //         font-weight: bold;
+    //     }
+    // }
 }
 
 .menubar {
@@ -45,7 +66,7 @@ body {
     height: 5vh;
     width: 100%;
     background-color: v.$menubar-color;
-    // position: fixed;
+    position: relative;
 
     &__left {
         display: flex;
@@ -115,4 +136,62 @@ body {
             font-size: v.$text-small;
         }
     }
+}
+
+.start__modal {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1000;
+    bottom: 5vh;
+    left: 0;
+    height: 60%;
+    width: 15%;
+    background-color: v.$start-color;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        height: inherit;
+        width: 5vh;
+    }
+
+    &__img {
+        flex: 1;
+        height: 30%;
+        width: 30%;
+        filter: invert(100%);
+
+        &--lg {
+            height: 40%;
+            width: 40%;
+        }
+    }
+
+    &__label {
+        margin: 0;
+        padding: 1em 0;
+        color: white;
+        font-size: small;
+
+        &--bold {
+            font-weight: bold;
+        }
+    }
+
+    &__top, &__menu {
+        display: flex;
+        justify-content: flex-start;
+
+        &:hover {
+            background-color: v.$start-hover-color;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
