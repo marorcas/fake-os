@@ -23,7 +23,7 @@
                 </div>
 
                 <!-- Photos icon -->
-                <div class="desktop__icon">
+                <div class="desktop__icon" id="photosIcon">
                     <img
                         class="desktop__icon__img"
                         title="Photos"
@@ -31,13 +31,6 @@
                     />
                     <p class="desktop__icon__title">Photos</p>
                 </div>
-
-                <!-- Photos modal -->
-                <!-- <div class="desktop__modal">
-                    <div class="desktop__modal__content">
-                        <span class="close">&times;</span>
-                    </div>
-                </div> -->
 
                 <!-- Notepad icon -->
                 <div class="desktop__icon">
@@ -126,6 +119,72 @@
 
                     <h1>Firefox</h1>
                 </div>
+            </div>
+
+            <!-- Photos modal -->
+            <div class="photos__modal" id="photosModal">
+                <div class="photos__modal__top">
+                    <div class="photos__modal__left">
+                        <div class="photos__modal__icon">
+                            <img
+                                class="photos__modal__img"
+                                title="Browse all your photos and videos"
+                                src="./assets/node_modules/bootstrap-icons/icons/images.svg"
+                            />
+                        </div>
+                    </div>
+                        
+                    <div class="photos__modal__right">
+                        <div class="photos__modal__icon">
+                            <img
+                                class="photos__modal__img"
+                                title="Minimize"
+                                src="./assets/node_modules/bootstrap-icons/icons/dash.svg"
+                            />
+                        </div>
+    
+                        <div class="photos__modal__icon">
+                            <img
+                                class="photos__modal__img photos__modal__img--sm"
+                                title="Maximize"
+                                src="./assets/node_modules/bootstrap-icons/icons/square.svg"
+                            />
+                        </div>
+    
+                        <div class="photos__modal__icon photos__modal__icon--x" id="closePhotos">
+                            <img
+                                class="photos__modal__img"
+                                title="Close"
+                                src="./assets/node_modules/bootstrap-icons/icons/x.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photos__modal__display">
+                    <img
+                        class="photos__modal__photo"
+                        id="mainImage"
+                        src="./assets/photo1.jpg"
+                    />
+                </div>
+                
+                <div class="photos__modal__gallery">
+                    <div class="photos__modal__gallery__container">
+                        <img 
+                            class="photos__modal__thumbnail"
+                            src="./assets/photo1.jpg"
+                        />
+                    </div>
+
+                    <div class="photos__modal__gallery__container">
+                        <img 
+                            class="photos__modal__thumbnail"
+                            src="./assets/photo2.jpg"
+                        />
+                    </div>
+                </div>
+            
             </div>
 
             <!-- Start modal -->

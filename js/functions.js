@@ -63,3 +63,35 @@ firefoxInput.addEventListener('keypress', (event) => {
         firefoxPage.appendChild(newPage);
     }
 });
+
+
+// for open and close photos
+const photosIcon = document.getElementById('photosIcon');
+const closePhotos = document.getElementById('closePhotos');
+const photosModal = document.getElementById('photosModal');
+
+photosIcon.addEventListener('click', () => {
+    photosModal.style.display = 'flex';
+});
+closePhotos.addEventListener('click', () => {
+    photosModal.style.display = 'none';
+});
+
+// for selecting photos
+const thumbnails = document.querySelectorAll('.photos__modal__thumbnail');
+// const containers = document.querySelectorAll('.photos__modal__container');
+
+thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', () => {
+        // containers.forEach((c) => c.classList.remove('photos__modal__container--selected'));
+        const imagePath = thumbnail.getAttribute('src');
+        // const parent = thumbnail.parentNode;
+        // parent.classList.add('.photos__modal__container--selected');
+        displayImage(imagePath);
+    });
+});
+
+const displayImage = (imagePath) => {
+    const mainImage = document.getElementById("mainImage");
+    mainImage.src = imagePath;
+};

@@ -110,8 +110,7 @@ body {
 }
 
 .firefox__modal {
-    // display: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     z-index: 1;
@@ -199,6 +198,98 @@ body {
             height: 20%;
             width: 20%;
         }
+    }
+}
+
+.photos__modal {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 25%;
+    height: 70vh;
+    width: 50%;
+    background-color: rgb(31, 31, 31);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+    }
+
+    &__right {
+        display: flex;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vh;
+
+        &:hover {
+            background-color: rgb(white, 0.05);
+        }
+
+        &--x {
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+
+    &__img {
+        flex: 1;
+        height: 40%;
+        width: 40%;
+        filter: invert(100%);
+
+        &--sm {
+            height: 25%;
+            width: 25%;
+        }
+    }
+
+    &__display {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__photo {
+        flex: 1;
+        height: 400px;
+    }
+
+    &__gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            height: 5em;
+            width: 7em;
+            background-color: rgb(44, 44, 44);
+            margin: 0 2px;
+            border: 2px solid transparent;
+
+            // &--selected {
+            //     border-color: rgb(204, 41, 137);
+            // }
+
+            &:hover {
+                border: 2px solid rgb(white, 0.05);
+            }
+        }
+    }
+
+    &__thumbnail {
+        height:5em;
     }
 }
 
