@@ -241,6 +241,67 @@ body {
   height: 5em;
 }
 
+.notepad__modal {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: 25%;
+  height: 70vh;
+  width: 50%;
+  background-color: white;
+}
+.notepad__modal__top {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+}
+.notepad__modal__left {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  padding-left: 1em;
+}
+.notepad__modal__right {
+  display: flex;
+}
+.notepad__modal__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vh;
+}
+.notepad__modal__icon:hover {
+  background-color: rgb(221, 221, 227);
+}
+.notepad__modal__icon--x:hover {
+  background-color: red;
+}
+.notepad__modal__img {
+  flex: 1;
+  height: 40%;
+  width: 40%;
+}
+.notepad__modal__img--sm {
+  height: 25%;
+  width: 25%;
+}
+.notepad__modal__container {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.notepad__modal__textarea {
+  position: absolute;
+  height: 99%;
+  width: 99%;
+}
+.notepad__modal__textarea:focus {
+  outline: none;
+}
+
 .start__modal {
   display: none;
   flex-direction: column;

@@ -293,6 +293,80 @@ body {
     }
 }
 
+.notepad__modal {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 25%;
+    height: 70vh;
+    width: 50%;
+    background-color:white;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        height: 5vh;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        font-size: small;
+        padding-left: 1em;
+    }
+
+    &__right {
+        display: flex;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vh;
+
+        &:hover {
+            background-color: rgb(221, 221, 227);
+        }
+
+        &--x {
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+
+    &__img {
+        flex: 1;
+        height: 40%;
+        width: 40%;
+
+        &--sm {
+            height: 25%;
+            width: 25%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__textarea {
+        position: absolute;
+        height: 99%;
+        width: 99%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
 .start__modal {
     display: none;
     flex-direction: column;

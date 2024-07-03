@@ -95,3 +95,18 @@ const displayImage = (imagePath) => {
     const mainImage = document.getElementById("mainImage");
     mainImage.src = imagePath;
 };
+
+
+// for open and close notepad
+const notepadIcon = document.getElementById('notepadIcon');
+const closeNotepad = document.getElementById('closeNotepad');
+const notepadModal = document.getElementById('notepadModal');
+const notepadInput = document.getElementById('notepadInput');
+
+notepadIcon.addEventListener('click', () => {
+    notepadModal.style.display = 'flex';
+});
+closeNotepad.addEventListener('click', () => {
+    notepadModal.style.display = 'none';
+    notepadInput.value = '';
+});

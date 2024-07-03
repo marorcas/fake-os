@@ -33,7 +33,7 @@
                 </div>
 
                 <!-- Notepad icon -->
-                <div class="desktop__icon">
+                <div class="desktop__icon" id="notepadIcon">
                     <img
                     class="desktop__icon__img"
                     title="Notepad"
@@ -41,13 +41,6 @@
                     />
                     <p class="desktop__icon__title">Notepad</p>
                 </div>
-
-                <!-- Notepad modal -->
-                <!-- <div class="desktop__modal">
-                    <div class="desktop__modal__content">
-                        <span class="desktop__modal__close">&times;</span>
-                    </div>
-                </div> -->
             </div>
 
             <!-- Firefox modal -->
@@ -184,7 +177,45 @@
                         />
                     </div>
                 </div>
-            
+            </div>
+
+            <!-- Notepad modal -->
+            <div class="notepad__modal" id="notepadModal">
+                <div class="notepad__modal__top">
+                    <div class="notepad__modal__left">
+                        <p>Untitled - Notepad</p>
+                    </div>
+
+                    <div class="notepad__modal__right">
+                        <div class="notepad__modal__icon">
+                            <img
+                                class="notepad__modal__img"
+                                title="Minimize"
+                                src="./assets/node_modules/bootstrap-icons/icons/dash.svg"
+                            />
+                        </div>
+    
+                        <div class="notepad__modal__icon">
+                            <img
+                                class="notepad__modal__img notepad__modal__img--sm"
+                                title="Maximize"
+                                src="./assets/node_modules/bootstrap-icons/icons/square.svg"
+                            />
+                        </div>
+    
+                        <div class="notepad__modal__icon notepad__modal__icon--x" id="closeNotepad">
+                            <img
+                                class="notepad__modal__img"
+                                title="Close"
+                                src="./assets/node_modules/bootstrap-icons/icons/x.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notepad__modal__container">
+                    <textarea class="notepad__modal__textarea" id="notepadInput"></textarea>
+                </div>
             </div>
 
             <!-- Start modal -->
