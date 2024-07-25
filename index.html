@@ -5,22 +5,334 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FakeOS</title>
         <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/functions.js" defer></script>
     </head>
+    
     <body>
         <main>
+            <!-- Desktop -->
             <div class="desktop">
-                <div class="desktop_icon"></div>
-                <div class="desktop_icon"></div>
-                <div class="desktop_icon"></div>
-            </div>
-
-            <div class="menubar">
-                <div class="menubar_icon">
-                    <img class="menubar_icon_img menubar_icon_img--white" src="./assets/node_modules/bootstrap-icons/icons/windows.svg"/>
+                <!-- Firefox icon -->
+                <div class="desktop__icon" id="firefoxIcon">
+                    <img
+                        class="desktop__icon__img"
+                        title="Firefox"
+                        src="./assets/firefox.png"
+                    />
+                    <p class="desktop__icon__title">Firefox</p>
                 </div>
 
-                <div class="menubar_icon">
-                    <img class="menubar_icon_img menubar_icon_img--flip menubar_icon_img--lg menubar_icon_img--white" src="./assets/node_modules/bootstrap-icons/icons/search.svg"/>
+                <!-- Photos icon -->
+                <div class="desktop__icon" id="photosIcon">
+                    <img
+                        class="desktop__icon__img"
+                        title="Photos"
+                        src="./assets/photos.png"
+                    />
+                    <p class="desktop__icon__title">Photos</p>
+                </div>
+
+                <!-- Notepad icon -->
+                <div class="desktop__icon" id="notepadIcon">
+                    <img
+                    class="desktop__icon__img"
+                    title="Notepad"
+                    src="./assets/notepad.png"
+                    />
+                    <p class="desktop__icon__title">Notepad</p>
+                </div>
+            </div>
+
+            <!-- Firefox modal -->
+            <div class="firefox__modal" id="firefoxModal">
+                <div class="firefox__modal__top">
+                    <div class="firefox__modal__tabs">
+                        <div class="firefox__modal__icon">
+                            <img
+                                class="firefox__modal__img"
+                                title="View recent browsing across windows and devices"
+                                src="./assets/node_modules/bootstrap-icons/icons/archive.svg"
+                            />
+                        </div>
+
+                        <div class="firefox__modal__tab">
+                            <!-- <div class="firefox__modal__icon">
+                                <img
+                                    class="firefox__modal__img firefox__modal__img--sm"
+                                    src="./assets/firefox.png"
+                                />
+                            </div> -->
+                            <p class="firefox__modal__tab__label">New Tab</p>
+                        </div>
+                    </div>
+
+                    <div class="firefox__modal__buttons">
+                        <div class="firefox__modal__icon">
+                            <img
+                                class="firefox__modal__img"
+                                title="Minimize"
+                                src="./assets/node_modules/bootstrap-icons/icons/dash.svg"
+                            />
+                        </div>
+
+                        <div class="firefox__modal__icon">
+                            <img
+                                class="firefox__modal__img"
+                                title="Restore Down"
+                                src="./assets/node_modules/bootstrap-icons/icons/copy.svg"
+                            />
+                        </div>
+
+                        <div class="firefox__modal__icon firefox__modal__icon--x" id="closeFirefox">
+                            <img
+                                class="firefox__modal__img"
+                                title="Close"
+                                src="./assets/node_modules/bootstrap-icons/icons/x.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="firefox__modal__input">
+                    <input 
+                        type="text" 
+                        class="firefox__modal__input__field" 
+                        id="firefoxInput";
+                        placeholder="Search or enter address"
+                    >
+                </div>
+
+                <div class="firefox__modal__page" id="firefoxPage">
+                    <div class="firefox__modal__page__icon">
+                        <img
+                            class="firefox__modal__page__img"
+                            src="./assets/firefox.png"
+                        />
+                    </div>
+
+                    <h1>Firefox</h1>
+                </div>
+            </div>
+
+            <!-- Photos modal -->
+            <div class="photos__modal" id="photosModal">
+                <div class="photos__modal__top">
+                    <div class="photos__modal__left">
+                        <div class="photos__modal__icon">
+                            <img
+                                class="photos__modal__img"
+                                title="Browse all your photos and videos"
+                                src="./assets/node_modules/bootstrap-icons/icons/images.svg"
+                            />
+                        </div>
+                    </div>
+                        
+                    <div class="photos__modal__right">
+                        <div class="photos__modal__icon">
+                            <img
+                                class="photos__modal__img"
+                                title="Minimize"
+                                src="./assets/node_modules/bootstrap-icons/icons/dash.svg"
+                            />
+                        </div>
+    
+                        <div class="photos__modal__icon">
+                            <img
+                                class="photos__modal__img photos__modal__img--sm"
+                                title="Maximize"
+                                src="./assets/node_modules/bootstrap-icons/icons/square.svg"
+                            />
+                        </div>
+    
+                        <div class="photos__modal__icon photos__modal__icon--x" id="closePhotos">
+                            <img
+                                class="photos__modal__img"
+                                title="Close"
+                                src="./assets/node_modules/bootstrap-icons/icons/x.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photos__modal__display">
+                    <img
+                        class="photos__modal__photo"
+                        id="mainImage"
+                        src="./assets/photo1.jpg"
+                    />
+                </div>
+                
+                <div class="photos__modal__gallery">
+                    <div class="photos__modal__gallery__container">
+                        <img 
+                            class="photos__modal__thumbnail"
+                            src="./assets/photo1.jpg"
+                        />
+                    </div>
+
+                    <div class="photos__modal__gallery__container">
+                        <img 
+                            class="photos__modal__thumbnail"
+                            src="./assets/photo2.jpg"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notepad modal -->
+            <div class="notepad__modal" id="notepadModal">
+                <div class="notepad__modal__top">
+                    <div class="notepad__modal__left">
+                        <p>Untitled - Notepad</p>
+                    </div>
+
+                    <div class="notepad__modal__right">
+                        <div class="notepad__modal__icon">
+                            <img
+                                class="notepad__modal__img"
+                                title="Minimize"
+                                src="./assets/node_modules/bootstrap-icons/icons/dash.svg"
+                            />
+                        </div>
+    
+                        <div class="notepad__modal__icon">
+                            <img
+                                class="notepad__modal__img notepad__modal__img--sm"
+                                title="Maximize"
+                                src="./assets/node_modules/bootstrap-icons/icons/square.svg"
+                            />
+                        </div>
+    
+                        <div class="notepad__modal__icon notepad__modal__icon--x" id="closeNotepad">
+                            <img
+                                class="notepad__modal__img"
+                                title="Close"
+                                src="./assets/node_modules/bootstrap-icons/icons/x.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notepad__modal__container">
+                    <textarea class="notepad__modal__textarea" id="notepadInput"></textarea>
+                </div>
+                <div class="notepad__modal__buttons">
+                    <button id="saveNotepad">Save</button>
+                    <button id="deleteNotepad">Delete</button>
+                </div>
+            </div>
+
+            <!-- Start modal -->
+            <div class="start__modal" id="startModal">
+                <!-- Start modal top -->
+                <div class="start__modal__top">
+                    <div class="start__modal__icon">
+                        <img
+                            class="start__modal__img start__modal__img--lg"
+                            src="./assets/node_modules/bootstrap-icons/icons/list.svg"
+                        />
+                    </div>
+                    <p class="start__modal__label start__modal__label--bold">START</p>
+                </div>
+            
+                <!-- Start modal bottom  -->
+                <div class="start__modal__bottom">
+                    <!-- Account -->
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/person-circle.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Maria</p>
+                    </div>
+
+                    <!-- Documents -->
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/file-earmark.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Documents</p>
+                    </div>
+
+                    <!-- Pictures -->
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/image.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Pictures</p>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/gear.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Settings</p>
+                    </div>
+
+                    <!-- Power -->
+                    <div class="start__modal__menu">
+                        <div class="start__modal__icon">
+                            <img
+                                class="start__modal__img"
+                                src="./assets/node_modules/bootstrap-icons/icons/list.svg"
+                            />
+                        </div>
+                        <p class="start__modal__label">Power</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu bar -->
+            <div class="menubar">
+                <div class="menubar__left">
+                    <!-- Start icon -->
+                    <div class="menubar__icon" id="startIcon">
+                        <img 
+                            class="menubar__icon__img menubar__icon__img--white" 
+                            title="Start"
+                            src="./assets/node_modules/bootstrap-icons/icons/windows.svg"
+                        />
+                    </div>
+    
+                    <!-- Search icon -->
+                    <div class="menubar__icon">
+                        <img 
+                            class="menubar__icon__img menubar__icon__img--flip menubar__icon__img--lg menubar__icon__img--white" 
+                            title="Search"
+                            src="./assets/node_modules/bootstrap-icons/icons/search.svg"
+                        />
+                    </div>
+                    
+                    <!-- Task View icon -->
+                    <div class="menubar__icon">
+                        <img 
+                            class="menubar__icon__img menubar__icon__img--white menubar__icon__img--sm" 
+                            title="Task View"
+                            src="./assets/node_modules/bootstrap-icons/icons/view-list.svg"
+                            onmouseover="hoverTask(this);" 
+                            onmouseout="unhoverTask(this);"
+                        />
+                    </div>
+                </div>
+                
+                <!-- Date and time -->
+                <div class="menubar__right">
+                    <div class="menubar__time">
+                        <p id="time"></p>
+                        <p id="date"></p>
+                    </div>
                 </div>
             </div>
         </main>
