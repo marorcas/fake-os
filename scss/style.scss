@@ -6,9 +6,10 @@ body {
 }
 
 .desktop {
-    display: grid;
-    grid-template-columns: repeat(20, minmax(0, 1fr));
-    grid-template-rows: repeat(10, minmax(0,1fr));
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: repeat(20, minmax(0, 1fr));
+    // grid-template-rows: repeat(10, minmax(0,1fr));
     height: 95vh;
     width: 100%;
     background-image: url(../assets/wallpaper.jpg);
@@ -20,6 +21,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 10%;
+        width: 5%;
 
         &__img {
             height: 50%;
@@ -364,6 +367,12 @@ body {
         &:focus {
             outline: none;
         }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
     }
 }
 

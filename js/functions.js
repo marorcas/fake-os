@@ -108,5 +108,24 @@ notepadIcon.addEventListener('click', () => {
 });
 closeNotepad.addEventListener('click', () => {
     notepadModal.style.display = 'none';
+
+    if (saveClicked === false) {
+        notepadInput.value = '';
+    }
+});
+
+
+// for save text in notepad
+const saveButton = document.getElementById('saveNotepad');
+let saveClicked = false;
+
+saveButton.addEventListener('click', () => {
+    saveClicked = true;
+});
+
+// for delete text in notepad
+const deleteButton = document.getElementById('deleteNotepad');
+
+deleteButton.addEventListener('click', () => {
     notepadInput.value = '';
 });
