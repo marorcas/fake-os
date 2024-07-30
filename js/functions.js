@@ -56,11 +56,20 @@ firefoxInput.addEventListener('keypress', (event) => {
         event.preventDefault();
 
         firefoxPage.innerHTML = "";
-        
-        const newPage = document.createElement("h1");
-        newPage.textContent = "Hmm. We're having trouble finding that site."
 
-        firefoxPage.appendChild(newPage);
+        const inputValue = firefoxInput.value;
+
+        if (inputValue.trim() === "bird") {
+            const newPage = document.createElement("img");
+            newPage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-W8uey-kbTFE%2FUrluLx3VlrI%2FAAAAAAAAAL4%2Ft5Jt9WqaSUk%2Fs1600%2FWestern%2BParotia.jpg&f=1&nofb=1&ipt=c57dfb616fdab526a98998f98ca2b739cd9cf83e8ce8fd81674881361f4a8867&ipo=images"
+            
+            firefoxPage.appendChild(newPage);
+        } else {
+            const newPage = document.createElement("h1");
+            newPage.textContent = "Hmm. We're having trouble finding that site."
+
+            firefoxPage.appendChild(newPage);
+        }
     }
 });
 
